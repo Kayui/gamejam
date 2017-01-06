@@ -1,31 +1,84 @@
 <!doctype html>
+
 <head>
     <meta charset="utf-8">
     <title>Team Lomdri</title>
     <link rel="stylesheet" href="stylesheets\style.css">
 </head>
+
 <body>
     <script src="javascripts\pixi.js\dist\pixi.min.js"></script>
 
     <script>
 
-    // Create the renderer
-    var renderer = PIXI.autoDetectRenderer(1, 1);
+        // Create the renderer
+        var renderer = PIXI.autoDetectRenderer(1, 1);
 
-    // Add the canvas to the HTML document
-    document.body.appendChild(renderer.view);
+        // Add the canvas to the HTML document
+        document.body.appendChild(renderer.view);
 
-    // Making the Canvas fill the screen
-    renderer.view.style.position = "absolute";
-    renderer.view.style.display = "block";
-    renderer.autoResize = true;
-    renderer.resize(window.innerWidth, window.innerHeight);
+        // Making the Canvas fill the screen
+        renderer.view.style.position = "absolute";
+        renderer.view.style.display = "block";
+        renderer.autoResize = true;
+        renderer.resize(window.innerWidth, window.innerHeight);
 
 
-    // Create a container object called the `stage`
-    var stage = new PIXI.Container();
-    // Tell the `renderer` to `render` the `stage`
-    renderer.render(stage);
+        // Create a container object called the `stage`
+        var stage = new PIXI.Container();
+
+        var fontStyle = {
+            fontFamily: 'Arial',
+            fontSize: '36px',
+            fontStyle: 'italic',
+            fontWeight: 'bold',
+            fill: '#F7EDCA',
+            stroke: '#4a1850',
+            strokeThickness: 64,
+            dropShadow: true,
+            dropShadowColor: 'red',
+            dropShadowAngle: Math.PI / 6,
+            dropShadowDistance: 62,
+            wordWrap: true,
+            wordWrapWidth: 440
+        };
+
+        // An Example Text Asset
+        var message = new PIXI.Text(
+            "Team Lomdri! Hello?!",
+            fontStyle
+        );
+
+        console.log(message);
+
+        // Positioning the Text
+        message.x = 54;
+        message.y = 96;
+
+        // Adding it to the stage
+        stage.addChild(message);
+
+        animate();
+        var bla = true;
+        function animate() {
+            requestAnimationFrame(animate);
+            if (bla) {
+                message.x += 1;
+                if (message.x > 300) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! ĦęľŀΟ?‼";
+                    bla = !bla;
+                }
+            }
+            else {
+                message.x -= 1;
+                if (message.x < 50) {
+                    message.text = "Team Lomdri! Hello!?";
+                    bla = !bla;
+                }
+            }
+            // Tell the `renderer` to `render` the `stage`
+            renderer.render(stage);
+        }
 
     </script>
 </body>
