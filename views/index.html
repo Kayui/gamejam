@@ -27,6 +27,7 @@
         // Create a container object called the `stage`
         var stage = new PIXI.Container();
 
+        // Nice info on custom fonts: http://www.html5gamedevs.com/topic/8659-about-fonts/
         var fontStyle = {
             fontFamily: 'Arial',
             fontSize: '36px',
@@ -67,6 +68,36 @@
                 if (message.x > 300) {
                     message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! ĦęľŀΟ?‼";
                     bla = !bla;
+                }
+                else if (message.x > 275 && message.x < 300) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! ĦęľŀΟ?!";
+                }
+                else if (message.x > 250 && message.x < 275) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħęľŀo?!";
+                }
+                else if (message.x > 225 && message.x < 250) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħęllo?!";
+                }
+                else if (message.x > 200 && message.x < 225) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħello?!";
+                }
+                else if (message.x > 175 && message.x < 200) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! hello?!";
+                }
+                else if (message.x > 150 && message.x < 175) {
+                    message.text = "Ţęąņŋ ŁΟņŋḑri! hello?!";
+                }
+                else if (message.x > 125 && message.x < 150) {
+                    message.text = "Ţęąņŋ ŁΟņndri! hello?!";
+                }
+                else if (message.x > 100 && message.x < 125) {
+                    message.text = "Ţęąņŋ Łonndri! hello?!";
+                }
+                else if (message.x > 75 && message.x < 100) {
+                    message.text = "Ţęąm Lonndri! hello?!";
+                }
+                else if (message.x > 50 && message.x < 75) {
+                    message.text = "Team Lonndri! hello?!";
                 }
             }
             else {
