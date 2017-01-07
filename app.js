@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 loader
   .into("app")
+  .include("data")
   .include("routes");
 
 
