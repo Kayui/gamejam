@@ -3,6 +3,37 @@
   margin: 0
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'VT323';
+  color: #fff;
+  font-size: 2vw;
+}
+
+@keyframes titleblink {
+    0% {color: #00FFB3;}
+    20% {color: #FF005E;}
+}
+
+.text {
+
+}
+
+.textHeader {
+  font-size: 2rem;
+}
+
+.textTitle {
+  font-size: 3rem;
+  animation-name: titleblink;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+
 @font-face {
     font-family: 'VT323';
     src:

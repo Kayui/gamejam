@@ -2,10 +2,10 @@ class DrawCircle {
 	constructor() {
 		this.options= {
 			color: 0xe74c3c,
-			x: 200,
-			y: 300,
+			x: 0,
+			y: 0,
 			fill: false,
-			radius: 50,
+			radius: 100,
 			width: 2
 		}
 	}
