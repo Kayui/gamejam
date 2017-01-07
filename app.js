@@ -35,7 +35,6 @@ loader
   .include("services")
   .include("routes");
 
-
 app.listen(8080, function () {
   console.log('Game listening on port 8080')
 });

@@ -15,7 +15,7 @@ $( document ).ready(function() {
   	app.circle.draw();
 		// http://localhost:8080/pinkos/0
 		$.ajax({
-			url: "/pinkos/0"
+			url: "/pinkos"
 		}).done(function(data) {
 			app.pinko.draw(data);
 		})
