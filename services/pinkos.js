@@ -4,10 +4,12 @@ class Pinkos {
 	constructor() {
 	}
 	getJSON(id, name, form) {
-		return { 
+		return {
 			'id': id,
 			'name': name,
-			'form': form
+			'form': form,
+			'width': 8,
+			'height': 8
 		};
 	}
 }
