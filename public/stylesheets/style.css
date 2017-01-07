@@ -2,3 +2,18 @@
   padding: 0;
   margin: 0
 }
+
+@font-face {
+    font-family: 'VT323';
+    src:
+    url('/font/VT323.ttf') format('ttf'),
+    url('/font/VT323.ttf.woff') format('woff'),
+    url('/font/VT323.ttf.svg#VT323') format('svg'),
+    url('/font/VT323.ttf.eot'),
+    url('/font/VT323.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  font-family: 'VT323';
+}
