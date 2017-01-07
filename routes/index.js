@@ -5,6 +5,7 @@ class Index {
     const express = require('express');
     const router = express.Router();
     router.get('/', function (req, res) {
+      // If the database is empty, initialize it
       app.services.Database.initialize();
       res.render('index');
     });

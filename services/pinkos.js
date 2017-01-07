@@ -9,7 +9,8 @@ class Pinkos {
 			'name': name,
 			'form': form,
 			'width': 8,
-			'height': 8
+			'height': 8,
+			'imageUrl': '/assets/characters/' + id + '.png'
 		};
 	}
 }

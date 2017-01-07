@@ -20,7 +20,6 @@ clientJSFiles.forEach(function(fname) {
     }
 });
 
-
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
