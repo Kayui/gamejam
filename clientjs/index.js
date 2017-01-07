@@ -11,7 +11,4 @@ $( document ).ready(function() {
     var title = new DrawText("Synthesia", {size: 2, center: true, color: 0});
     app.render.draw(title);
 	});
-
-
-
 });

@@ -5,6 +5,7 @@ class Index {
     const express = require('express');
     const router = express.Router();
     router.get('/', function (req, res) {
+      app.services.Database.initialize();
       res.render('index');
     });
     app.use(router);

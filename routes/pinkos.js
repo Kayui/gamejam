@@ -7,6 +7,7 @@ class Pinkos {
 
     router.get('/', function (req, res) {
       // RETURN ALL PINKOS PLZ
+      app.services.Database.merge(1,2);
       res.json(app.services.Database.getPinkos());
     });
 
