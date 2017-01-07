@@ -10,11 +10,14 @@ html, body {
   font-family: 'VT323';
   color: #fff;
   font-size: 2vw;
+  background: #333;
+  overflow: hidden;
 }
 
 @keyframes titleblink {
-    0% {color: #00FFB3;}
+    0% {color: #00FFB3; }
     20% {color: #FF005E;}
+
 }
 
 .text {
@@ -31,6 +34,7 @@ html, body {
   animation-duration: 1.2s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
+
 }
 
 
@@ -45,6 +49,60 @@ html, body {
     font-weight: normal;
     font-style: normal;
 }
+
+.topline {
+    position: absolute;
+    top: 15px;
+    min-height: 8px;
+    max-height: 35px;
+    height: 15%;
+    width: 100%;
+    background: rgb(255, 0, 94);
+}
+
+
+.bottomline {
+    position: absolute;
+    bottom: 15px;
+    min-height: 8px;
+    max-height: 35px;
+    height: 15%;
+    text-align: center;
+    width: 100%;
+    background: rgb(255, 0, 94);
+}
+
 body {
   font-family: 'VT323';
+}
+
+// fade in
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  animation:fadeIn ease-in 1;
+
+  animation-fill-mode:forwards;
+
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  animation-delay: 0.3s;
+}
+
+.fade-in.two {
+  animation-delay: 0.7s;
+}
+
+.fade-in.three {
+  animation-delay: 0.8s;
+}
+
+.fade-in.four {
+  animation-delay: 1.4s;
 }

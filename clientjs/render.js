@@ -1,8 +1,9 @@
 "use strict";
 
 class Render {
-	constructor(element) {
+	constructor(element, fullscreen) {
 		this.element = document.createElement("div");
+		this.fullscreen = fullscreen || false;
 		element.appendChild(this.element);
 		$(window).on('resize', function(){
 			this.style();
@@ -14,9 +15,11 @@ class Render {
 		this.element.appendChild(element.object);
 	}
 	style() {
-		console.log("Resizing view");
-		this.element.style.width =  "100%";
-		this.element.style.height =  "100%";
-		this.element.style.background = "#000000";
+		if (this.fullscreen) {
+			console.log("Resizing view");
+			this.element.style.width =  "100%";
+			this.element.style.height =  "100%";
+			this.element.style.background = "#333333";
 		}
+	}
 }
