@@ -2,6 +2,7 @@
 
 const express = require('express'),
     path = require('path'),
+    fs = require('fs'),
     favicon = require('serve-favicon'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
@@ -10,6 +11,15 @@ const express = require('express'),
 
 
 global.app = express();
+const clientJSFiles = fs.readdirSync('./clientjs');
+app.clientJSFile = "";
+
+clientJSFiles.forEach(function(fname) {
+    if (/^.*\.js$/.test(fname)) {
+        app.clientJSFile += fs.readFileSync(path.join('./clientjs/', fname), 'utf8').toString();
+    }
+});
+
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

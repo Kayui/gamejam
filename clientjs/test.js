@@ -1,0 +1,99 @@
+// Create the renderer
+var renderer = PIXI.autoDetectRenderer(1, 1);
+
+// Add the canvas to the HTML document
+document.body.appendChild(renderer.view);
+
+// Making the Canvas fill the screen
+renderer.view.style.position = "absolute";
+renderer.view.style.display = "block";
+renderer.autoResize = true;
+renderer.resize(window.innerWidth, window.innerHeight);
+
+
+// Create a container object called the `stage`
+var stage = new PIXI.Container();
+
+// Nice info on custom fonts: http://www.html5gamedevs.com/topic/8659-about-fonts/
+var fontStyle = {
+		fontFamily: 'Arial',
+		fontSize: '36px',
+		fontStyle: 'italic',
+		fontWeight: 'bold',
+		fill: '#F7EDCA',
+		stroke: '#4a1850',
+		strokeThickness: 64,
+		dropShadow: true,
+		dropShadowColor: 'red',
+		dropShadowAngle: Math.PI / 6,
+		dropShadowDistance: 62,
+		wordWrap: true,
+		wordWrapWidth: 440
+};
+
+// An Example Text Asset
+var message = new PIXI.Text(
+		"Team Lomdri! Hello?!",
+		fontStyle
+);
+
+console.log(message);
+
+// Positioning the Text
+message.x = 54;
+message.y = 96;
+
+// Adding it to the stage
+stage.addChild(message);
+
+animate();
+var bla = true;
+function animate() {
+		requestAnimationFrame(animate);
+		if (bla) {
+				message.x += 1;
+				if (message.x > 300) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! ĦęľŀΟ?‼";
+						bla = !bla;
+				}
+				else if (message.x > 275 && message.x < 300) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! ĦęľŀΟ?!";
+				}
+				else if (message.x > 250 && message.x < 275) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħęľŀo?!";
+				}
+				else if (message.x > 225 && message.x < 250) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħęllo?!";
+				}
+				else if (message.x > 200 && message.x < 225) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! Ħello?!";
+				}
+				else if (message.x > 175 && message.x < 200) {
+						message.text = "Ţęąņŋ ŁΟņŋḑŗĭ! hello?!";
+				}
+				else if (message.x > 150 && message.x < 175) {
+						message.text = "Ţęąņŋ ŁΟņŋḑri! hello?!";
+				}
+				else if (message.x > 125 && message.x < 150) {
+						message.text = "Ţęąņŋ ŁΟņndri! hello?!";
+				}
+				else if (message.x > 100 && message.x < 125) {
+						message.text = "Ţęąņŋ Łonndri! hello?!";
+				}
+				else if (message.x > 75 && message.x < 100) {
+						message.text = "Ţęąm Lonndri! hello?!";
+				}
+				else if (message.x > 50 && message.x < 75) {
+						message.text = "Team Lonndri! hello?!";
+				}
+		}
+		else {
+				message.x -= 1;
+				if (message.x < 50) {
+						message.text = "Team Lomdri! Hello!?";
+						bla = !bla;
+				}
+		}
+		// Tell the `renderer` to `render` the `stage`
+		renderer.render(stage);
+}
