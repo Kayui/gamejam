@@ -24,6 +24,12 @@ var showUsersHelper = function(users) {
 	 app.extrarender.element.style.position ="absolute";
 	 app.extrarender.element.style.top ="0";
 	 app.extrarender.element.style.left ="0";
+
+	 var text = new DrawText("Society: anarchist", {size: 0, center: true, color: 5});
+
+	 app.extrarender.draw(text);
+
+
 	 let grid = document.createElement("div");
 	 grid.style.display = "flex";
 	 grid.style.flexWrap = "wrap";
@@ -47,7 +53,6 @@ var showUsersHelper = function(users) {
 	 while (parseInt(getHeight(imgSize)) > height) {
 		 imgSize = imgSize - 1;
 	 }
-	 console.log("Image size is"+ imgSize);
 	 grid.style.overflowY = "scroll";
 	 grid.style.height=height-20+"px";
 	 for (let key in users) {

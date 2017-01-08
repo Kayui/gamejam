@@ -13,11 +13,14 @@ var stripeStartPos = 0;
 var ctx = canvas.getContext("2d");
 
 var initSplash = function(endfunction) {
+  keyhandler = function(keycode) {
+    return;
+  }
   document.body.innerHTML = '';
   document.body.appendChild(canvas);
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  splashMusic();
+	splashconductor.player.play();
   setTimeout(ShowDataSignal, 250);
   setTimeout(pilotSignalTimer, 400);
   setTimeout(ShowDataSignal, 600);

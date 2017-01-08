@@ -27,5 +27,5 @@ var splashMusic = function() {
 		splashconductor.drum.rest('whole');
 	splashconductor.player = splashconductor.finish();
 	splashconductor.player.loop(false);
-	splashconductor.player.play();
+
 }
