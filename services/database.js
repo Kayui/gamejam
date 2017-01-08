@@ -23,7 +23,7 @@ class Database {
                         0, 1, 1, 1, 1, 1, 1, 0,
                         0, 1, 1, 1, 1, 1, 1, 0,
                         0, 0, 0, 1, 1, 0, 0, 0],
-                        6
+                    6
                 ),
                 "lommi lomm": app.services.Pinkos.getJSON(
                     1,
@@ -37,7 +37,7 @@ class Database {
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5],
-                        9
+                    9
                 ),
                 "karl marx": app.services.Pinkos.getJSON(
                     2,
@@ -51,7 +51,7 @@ class Database {
                         0, 2, 2, 2, 2, 2, 2, 0,
                         0, 2, 2, 2, 2, 2, 2, 0,
                         2, 2, 2, 2, 2, 2, 2, 2],
-                        7
+                    7
                 ),
                 "andri rafn": app.services.Pinkos.getJSON(
                     3,
@@ -65,7 +65,7 @@ class Database {
                         0, 4, 4, 4, 1, 1, 1, 0,
                         0, 4, 4, 4, 1, 1, 1, 0,
                         4, 4, 4, 4, 1, 1, 1, 1],
-                        2
+                    2
                 ),
                 "vladimir ulyanov": app.services.Pinkos.getJSON(
                     4,
@@ -79,7 +79,7 @@ class Database {
                         1, 3, 3, 1, 1, 3, 3, 1,
                         1, 3, 1, 1, 1, 1, 3, 1,
                         3, 3, 1, 1, 1, 1, 3, 3],
-                        4
+                    4
                 ),
                 "leon trotsky": app.services.Pinkos.getJSON(
                     5,
@@ -93,7 +93,7 @@ class Database {
                         5, 5, 5, 5, 5, 5, 5, 3,
                         5, 5, 5, 5, 5, 5, 3, 3,
                         5, 5, 5, 5, 5, 3, 3, 3],
-                        6
+                    6
                 ),
                 "joseph stalin": app.services.Pinkos.getJSON(
                     6,
@@ -107,7 +107,7 @@ class Database {
                         0, 4, 4, 4, 0, 0, 0, 0,
                         0, 4, 0, 0, 0, 0, 0, 0,
                         4, 4, 0, 0, 0, 0, 0, 0],
-                        0
+                    0
                 )
             };
 
@@ -138,14 +138,14 @@ class Database {
             }
         }
         var fetch_random = function fetch_random(obj) {
-    var temp_key, keys = [];
-    for(temp_key in obj) {
-       if(obj.hasOwnProperty(temp_key)) {
-           keys.push(temp_key);
-       }
-    }
-    return obj[keys[Math.floor(Math.random() * keys.length)]];
-}
+            var temp_key, keys = [];
+            for (temp_key in obj) {
+                if (obj.hasOwnProperty(temp_key)) {
+                    keys.push(temp_key);
+                }
+            }
+            return obj[keys[Math.floor(Math.random() * keys.length)]];
+        }
         return fetch_random(this.data);
     }
 
@@ -172,35 +172,25 @@ class Database {
             bias = false;
         }
 
-        console.log("\n \n");
-        console.log("id1: " + id1);
-        console.log(parent1);
-        console.log("id2: " + id2);
-        console.log(parent2);
-        console.log("\n \n");
         name += " ";
 
         let id = this.getMaxID();
         id++;
-        console.log("maxID: " + id);
 
-        if (parent2 === undefined) {
-          console.log("what the fuck");
-        }
         if (bias) {
             var newName = parent2.name.split(" ") || ["Marx"];
             name += newName[newName.length - 1];
         }
         else {
-          var newName = parent1.name.split(" ") || ["Marx"];
-          name += newName[newName.length - 1]
+            var newName = parent1.name.split(" ") || ["Marx"];
+            name += newName[newName.length - 1]
         }
 
         let pol = 0;
-        if(parent1.political >= parent2.political){
+        if (parent1.political >= parent2.political) {
             pol = parseInt(Math.random() * (parent1.political - parent2.political) + parent2.political);
         }
-        else{
+        else {
             pol = parseInt(Math.random() * (parent2.political - parent1.political) + parent1.political);
         }
 
@@ -216,7 +206,7 @@ class Database {
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0],
-                pol
+            pol
         )
 
         let size = 0;

@@ -21,7 +21,11 @@ class Pinkos {
       }
       
       let average = Math.floor(sum/count);
-      console.log(average);
+      for (var key in pinkos) {
+        if (pinkos.hasOwnProperty(key)) {
+          pinkos[key].average = average;
+        }
+      }
       
       res.json(pinkos);
     });
