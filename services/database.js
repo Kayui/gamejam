@@ -51,7 +51,7 @@ class Database {
                         0, 2, 2, 2, 2, 2, 2, 0,
                         0, 2, 2, 2, 2, 2, 2, 0,
                         2, 2, 2, 2, 2, 2, 2, 2],
-                        8
+                        7
                 ),
                 "andri rafn": app.services.Pinkos.getJSON(
                     3,
@@ -107,7 +107,7 @@ class Database {
                         0, 4, 4, 4, 0, 0, 0, 0,
                         0, 4, 0, 0, 0, 0, 0, 0,
                         4, 4, 0, 0, 0, 0, 0, 0],
-                        3
+                        0
                 )
             };
 
@@ -162,16 +162,24 @@ class Database {
             bias = false;
         }
 
+        console.log("\n \n");
+        console.log("id1: " + id1);
+        console.log(parent1);
+        console.log("id2: " + id2);
+        console.log(parent2);
+        console.log("\n \n");
         name += " ";
+
+        let id = this.getMaxID();
+        id++;
+        console.log("maxID: " + id);
+
         if (bias) {
             name += parent2.name.split(" ")[1];
         }
         else {
             name += parent1.name.split(" ")[1];
         }
-
-        let id = this.getMaxID();
-        id++;
 
         let pol = 0;
         if(parent1.political >= parent2.political){

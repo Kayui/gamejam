@@ -54,9 +54,3 @@ $.post({
   // do stuff with new Pinko!
 });
 ```
-
-fascist 1-2  
-capitalist 3-4  
-social democrat 5-6  
-communist 7-8  
-anarchist 9-10

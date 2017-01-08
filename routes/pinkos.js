@@ -9,6 +9,20 @@ class Pinkos {
       // RETURN ALL PINKOS PLZ
       app.services.Database.initialize();
       let pinkos = app.services.Database.getPinkos();
+      console.log("hey");
+
+      let count = 0;
+      let sum = 0;
+      for (var key in pinkos) {
+        if (pinkos.hasOwnProperty(key)) {
+          sum += pinkos[key].political;
+          count++;
+        }
+      }
+      
+      let average = Math.floor(sum/count);
+      console.log(average);
+      
       res.json(pinkos);
     });
 
@@ -19,12 +33,11 @@ class Pinkos {
       var id1 = 0;
       var id2 = 0;
       var maxID = app.services.Database.getMaxID();
-      while (id1 === id2)
-      {
+      while (id1 === id2) {
         id1 = parseInt(Math.random() * (maxID - 0) + 0);
         id2 = parseInt(Math.random() * (maxID - 0) + 0);
       }
-      
+
       let parent1 = app.services.Database.getPinkos(id1);
       let parent2 = app.services.Database.getPinkos(id2);
       let freshPinko = app.services.Database.merge(id1, id2);
@@ -41,12 +54,11 @@ class Pinkos {
     router.get('/merge/:count', function (req, res) {
       // NOW RANDOMLY KISS ALOT!
       app.services.Database.initialize();
-      for(let i = 0; i < req.params.count; i++) {
+      for (let i = 0; i < req.params.count; i++) {
         var id1 = 0;
         var id2 = 0;
         var maxID = app.services.Database.getMaxID();
-        while (id1 === id2)
-        {
+        while (id1 === id2) {
           id1 = parseInt(Math.random() * (maxID - 0) + 0);
           id2 = parseInt(Math.random() * (maxID - 0) + 0);
         }
