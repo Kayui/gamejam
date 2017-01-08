@@ -23,6 +23,9 @@ html, body {
 .text {
 
 }
+.smallText {
+  font-size: 0.4rem;
+}
 
 .textHeader {
   font-size: 2rem;
