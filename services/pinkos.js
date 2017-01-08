@@ -3,11 +3,13 @@
 class Pinkos {
 	constructor() {
 	}
-	getJSON(id, name, form) {
+	getJSON(id, name, form, pol) {
 		return {
 			'id': id,
 			'name': name,
 			'form': form,
+			'political': pol,
+			'lifepoints': 6,
 			'width': 8,
 			'height': 8,
 			'imageUrl': '/assets/characters/' + id + '.png'

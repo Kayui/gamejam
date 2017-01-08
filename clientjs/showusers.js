@@ -28,7 +28,6 @@ var showUsersHelper = function(users) {
 	 grid.style.display = "flex";
 	 grid.style.flexWrap = "wrap";
 	 grid.style.flexDirection = "row";
-	 var height = parseInt($( window).height());
 
 	 function getHeight(imgSize) {
 		var width = parseInt($( window ).width());
@@ -43,11 +42,14 @@ var showUsersHelper = function(users) {
 	 console.log(getHeight(imgSize));
 	 console.log($( window).height());
 
-	 while (getHeight(imgSize) > height) {
-		 imgSize--;
+	 var height = parseInt($( window).height());
+	 console.log("Height is "+height);
+	 while (parseInt(getHeight(imgSize)) > height) {
+		 imgSize = imgSize - 1;
 	 }
-
-
+	 console.log("Image size is"+ imgSize);
+	 grid.style.overflowY = "scroll";
+	 grid.style.height=height-20+"px";
 	 for (let key in users) {
 		 let y = document.createElement('div');
 		 y.style.maxWidth = "64px";
@@ -55,6 +57,7 @@ var showUsersHelper = function(users) {
 		 y.style.margin = "15px";
 		 let x = document.createElement('img');
 		 x.src = users[key].imageUrl;
+		 y.title = users[key].name;
 		 x.style.display = "block";
 		 x.style.width =  imgSize + "px";
 		 x.style.height = "auto";
