@@ -355,7 +355,6 @@ class Dialogs {
                     }
                 }
                 if (found) {
-                    console.log(option);
                     return app.services.Database.updatePinko(pinkoID, option.lifedrain, option.politicalSwing);
                 }
             }
@@ -371,17 +370,10 @@ class Dialogs {
         let political = "center";
         let pinko = app.services.Database.getPinkos(pinkoID);
 
-        if (pinko.lifepoints === 1) {
-            game = "end";
-        }
-        else if (pinko.lifepoints === 6) {
-            game = "begin";
-        }
-
-        if (pinko.political < 4) {
+        if (parseInt(pinko.political) < 4) {
             political = "right";
         }
-        else if (pinko.political > 6) {
+        else if (parseInt(pinko.political) > 6) {
             political = "left";
         }
 
