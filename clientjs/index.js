@@ -13,6 +13,7 @@ $( document ).ready(function() {
   app.palette = getPalette();
   app.maxW = 1024;
 
+  splashMusic();
   loadIntroMusic();
 
 	waitForWebfonts(['VT323'], function() {
