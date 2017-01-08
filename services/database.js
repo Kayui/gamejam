@@ -87,6 +87,12 @@ class Database {
             name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         }
 
+        name += " ";
+        
+        for (let i = 0; i < 8; i++) {
+            name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        }
+
         let id = 0;
         for (var key in this.data) {
             if (this.data.hasOwnProperty(key)) {
@@ -140,7 +146,6 @@ class Database {
 
     getImage(id) {
         let name = this.getPinkos(id).name;
-        console.log(name);
         let png = new PNG({
             width: 64,
             height: 64,

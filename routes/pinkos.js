@@ -17,7 +17,7 @@ class Pinkos {
       res.send(app.services.Database.getPinkos(req.params.id));
     });
     
-    router.post('/:id1/:id2', function (req, res) {
+    router.get('/:id1/:id2', function (req, res) {
       // TODO: REMOVE!
       app.services.Database.initialize();
       let freshPinko = app.services.Database.merge(req.params.id1, req.params.id2);
