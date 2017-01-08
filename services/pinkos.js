@@ -9,6 +9,7 @@ class Pinkos {
 			'name': name,
 			'form': form,
 			'political': pol,
+			'politicalName': app.services.Politics.getPolitics(pol),
 			'lifepoints': 6,
 			'width': 8,
 			'height': 8,

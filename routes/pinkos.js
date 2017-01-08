@@ -8,7 +8,8 @@ class Pinkos {
     router.get('/', function (req, res) {
       // RETURN ALL PINKOS PLZ
       app.services.Database.initialize();
-      res.json(app.services.Database.getPinkos());
+      let pinkos = app.services.Database.getPinkos();
+      res.json(pinkos);
     });
 
     router.get('/merge', function (req, res) {

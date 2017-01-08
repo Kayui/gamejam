@@ -36,7 +36,8 @@ class Database {
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5,
-                        5, 5, 5, 5, 5, 5, 5, 5],9
+                        5, 5, 5, 5, 5, 5, 5, 5],
+                        9
                 ),
                 "karl marx": app.services.Pinkos.getJSON(
                     2,
@@ -49,7 +50,8 @@ class Database {
                         0, 0, 2, 2, 2, 2, 0, 0,
                         0, 2, 2, 2, 2, 2, 2, 0,
                         0, 2, 2, 2, 2, 2, 2, 0,
-                        2, 2, 2, 2, 2, 2, 2, 2], 8
+                        2, 2, 2, 2, 2, 2, 2, 2],
+                        8
                 ),
                 "andri rafn": app.services.Pinkos.getJSON(
                     3,
@@ -62,7 +64,8 @@ class Database {
                         0, 0, 4, 4, 1, 1, 0, 0,
                         0, 4, 4, 4, 1, 1, 1, 0,
                         0, 4, 4, 4, 1, 1, 1, 0,
-                        4, 4, 4, 4, 1, 1, 1, 1],2
+                        4, 4, 4, 4, 1, 1, 1, 1],
+                        2
                 ),
                 "vladimir ulyanov": app.services.Pinkos.getJSON(
                     4,
@@ -75,7 +78,8 @@ class Database {
                         1, 1, 3, 3, 3, 3, 1, 1,
                         1, 3, 3, 1, 1, 3, 3, 1,
                         1, 3, 1, 1, 1, 1, 3, 1,
-                        3, 3, 1, 1, 1, 1, 3, 3],4
+                        3, 3, 1, 1, 1, 1, 3, 3],
+                        4
                 ),
                 "leon trotsky": app.services.Pinkos.getJSON(
                     5,
@@ -88,7 +92,8 @@ class Database {
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 3,
                         5, 5, 5, 5, 5, 5, 3, 3,
-                        5, 5, 5, 5, 5, 3, 3, 3],6
+                        5, 5, 5, 5, 5, 3, 3, 3],
+                        6
                 ),
                 "joseph stalin": app.services.Pinkos.getJSON(
                     6,
@@ -101,7 +106,8 @@ class Database {
                         0, 0, 0, 4, 0, 0, 0, 0,
                         0, 4, 4, 4, 0, 0, 0, 0,
                         0, 4, 0, 0, 0, 0, 0, 0,
-                        4, 4, 0, 0, 0, 0, 0, 0],3
+                        4, 4, 0, 0, 0, 0, 0, 0],
+                        3
                 )
             };
 
@@ -167,6 +173,14 @@ class Database {
         let id = this.getMaxID();
         id++;
 
+        let pol = 0;
+        if(parent1.political >= parent2.political){
+            pol = parseInt(Math.random() * (parent1.political - parent2.political) + parent2.political);
+        }
+        else{
+            pol = parseInt(Math.random() * (parent2.political - parent1.political) + parent1.political);
+        }
+
         this.data[name] = app.services.Pinkos.getJSON(
             id,
             name,
@@ -178,7 +192,8 @@ class Database {
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0,
-                0, 0, 0, 0, 0, 0, 0, 0]
+                0, 0, 0, 0, 0, 0, 0, 0],
+                pol
         )
 
         let size = 0;
