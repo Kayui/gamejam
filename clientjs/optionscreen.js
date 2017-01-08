@@ -8,7 +8,7 @@ let currentId = null;
 let currentOption = 0;
 
 var pickOption = function() {
-  initSplash(function() {});  
+  initSplash(function() {});
 }
 
 var optionscreen = function(id, text, options) {
@@ -73,7 +73,6 @@ var optionscreen = function(id, text, options) {
 
      $('.optionpick').removeClass("selected");
      $('.optionid'+currentOption).addClass("selected");
-     console.log(currentOption);
    }
    let i = 0;
    for (let key in options) {
@@ -83,6 +82,11 @@ var optionscreen = function(id, text, options) {
      console.log(x);
      let extraClassname = currentOption === i ? " selected" : " ";
      console.log(extraClassname)
+     $(x).click(function() {
+       currentOption = key;
+       window.setTimeout(pickOption, 500);
+
+     });
      x.className = "optionid"+key+ " " + "optionpick" + extraClassname;
      app.mainholder.element.appendChild(x);
      i++;

@@ -50,6 +50,11 @@ html, body {
   margin-bottom: 30px;
 }
 
+.optionpick:hover {
+  border-color: rgb(255, 0, 94);
+  color: rgb(255, 0, 94);
+}
+
 .optionpick.selected {
   border-color: rgb(255, 0, 94);
   color: rgb(255, 0, 94);
