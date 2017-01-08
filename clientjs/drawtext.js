@@ -2,7 +2,7 @@
 
 class DrawText {
 	constructor(text, options) {
-		this.classNames = ['text', 'textHeader', 'textTitle'];
+		this.classNames = ['text', 'textHeader', 'textTitle','textSmall'];
 		options = options || {};
 		this.center = options.center || false;
 		this.color = options.color || 1;

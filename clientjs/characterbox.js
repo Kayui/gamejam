@@ -18,8 +18,11 @@ class DrawCharacterBox {
 		this.img.style.height = "64px";
 		this.character.element.appendChild(this.img);
 
-		this.text = new DrawText(this.name, {size: 0, center: true, color: 4});
+		this.text = new DrawText(this.name, {size: 3, center: true, color: 4});
 		this.character.draw(this.text);
+		this.textName = new DrawText(options.politicalName, {size: 0, center: true, color: 4});
+		this.character.draw(this.textName);
+
 	}
 
 

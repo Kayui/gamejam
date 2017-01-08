@@ -71,7 +71,7 @@ var newGameHelper = function(characterData) {
   app.mainholder.element.appendChild(holder2);
 
   var character = new DrawCharacterBox(characterData.child, "four", holder2);
-
+  
   app.nextLine = document.createElement("div");
   app.nextLine.className = "bottomline";
 
