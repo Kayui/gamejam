@@ -1,3 +1,112 @@
+,
+{
+    "id": ,
+    "situation": "",
+    "precondition": ["left", "begin", "end", "middle"],
+    "options": [
+        {
+            "optionID": 0,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 1,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 2,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 3,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        }
+    ]
+},
+{
+    "id": ,
+    "situation": "",
+    "precondition": ["left", "begin", "end", "middle"],
+    "options": [
+        {
+            "optionID": 0,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 1,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 2,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 3,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        }
+    ]
+},
+{
+    "id": ,
+    "situation": "",
+    "precondition": ["left", "begin", "end", "middle"],
+    "options": [
+        {
+            "optionID": 0,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 1,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 2,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        },
+        {
+            "optionID": 3,
+            "text": "",
+            "lifedrain": ,
+            "politicalSwing": ,
+            "postText": ""
+        }
+    ]
+}
+
+
+
 You went to IKEA and
 
 Ate cheap Vegetarian food.
