@@ -1,12 +1,16 @@
 var newGame = function() {
   $.ajax({
   url: "/pinkos/merge",
-  success: function() {
-    console.log("hohho");
+  success: function(data) {
+    newGameHelper(data);
   }
   });
 }
-var newGameHelper = function() {
+
+let pinkosData = null;
+
+var newGameHelper = function(characterData) {
+  pinkosData = characterData.child;
   keyhandler = function() {
     console.log("start game");
     keyhandler = function() {
@@ -38,8 +42,8 @@ var newGameHelper = function() {
   app.holder.element.appendChild(holder);
 
 
-  var character = new DrawCharacterBox(undefined, "", holder);
-  var character2 = new DrawCharacterBox(undefined, "one", holder);
+  var character = new DrawCharacterBox(characterData.parent1 , "", holder);
+  var character2 = new DrawCharacterBox(characterData.parent2, "one", holder);
 
   // app.render.draw(character.character);
 
@@ -66,7 +70,7 @@ var newGameHelper = function() {
   holder2.style.display = "flex";
   app.mainholder.element.appendChild(holder2);
 
-  var character = new DrawCharacterBox(undefined, "four", holder2);
+  var character = new DrawCharacterBox(characterData.child, "four", holder2);
 
   app.nextLine = document.createElement("div");
   app.nextLine.className = "bottomline";
