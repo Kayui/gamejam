@@ -4,74 +4,6 @@ class Dialogs {
         this.dialogs = [
             {
                 "id": 0,
-                "situation": "this is a sticky situation",
-                "precondition": ["left", "right", "center", "begin", "end", "middle"],
-                "options": [
-                    {
-                        "optionID": 0,
-                        "text": "unstick",
-                        "lifedrain": 2,
-                        "politicalSwing": -1,
-                        "postText": "you unstick and scutter away with a grin"
-                    },
-                    {
-                        "optionID": 1,
-                        "text": "gtfo",
-                        "lifedrain": 1,
-                        "politicalSwing": 0,
-                        "postText": "nice man, real nice..."
-                    },
-                    {
-                        "optionID": 2,
-                        "text": "kill self",
-                        "lifedrain": 6,
-                        "politicalSwing": 0,
-                        "postText": "you fail to kill yourself but die of exposure"
-                    },
-                    {
-                        "optionID": 3,
-                        "text": "does not matter",
-                        "lifedrain": 2,
-                        "politicalSwing": 1
-                    }
-                ]
-            },
-            {
-                "id": 1,
-                "situation": "this is another not as sticky of a situation",
-                "precondition": ["left", "right", "center", "begin", "end", "middle"],
-                "options": [
-                    {
-                        "optionID": 0,
-                        "text": "not this again...",
-                        "lifedrain": 2,
-                        "politicalSwing": -1,
-                        "postText": "you unstick and falter away with a grin"
-                    },
-                    {
-                        "optionID": 1,
-                        "text": "gtfo",
-                        "lifedrain": 1,
-                        "politicalSwing": 0,
-                        "postText": "nice man, real nice..."
-                    },
-                    {
-                        "optionID": 2,
-                        "text": "kill self",
-                        "lifedrain": 6,
-                        "politicalSwing": 0,
-                        "postText": "you fail to kill yourself but die of exposure"
-                    },
-                    {
-                        "optionID": 3,
-                        "text": "does not matter",
-                        "lifedrain": 2,
-                        "politicalSwing": 1
-                    }
-                ]
-            },
-            {
-                "id": 2,
                 "situation": "By average everyone is great.",
                 "precondition": ["center", "begin", "end", "middle"],
                 "options": [
@@ -102,7 +34,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 3,
+                "id": 1,
                 "situation": "Where do all the lonely people come from?",
                 "precondition": ["center", "begin", "end", "middle"],
                 "options": [
@@ -129,7 +61,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 4,
+                "id": 2,
                 "situation": "You are more average than other people.",
                 "precondition": ["center", "begin", "end", "middle"],
                 "options": [
@@ -155,7 +87,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 5,
+                "id": 3,
                 "situation": "You match with a person on Tinder but find out that the person is a communist.",
                 "precondition": ["right", "begin", "end", "middle"],
                 "options": [
@@ -181,7 +113,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 6,
+                "id": 4,
                 "situation": "You have spent allt your time lately remixing tracks by Burzum.",
                 "precondition": ["right", "begin", "end", "middle"],
                 "options": [
@@ -212,7 +144,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 7,
+                "id": 5,
                 "situation": "Your new lover tells you that you are hopelessly dull and doesn't want to see you again.",
                 "precondition": ["right", "begin", "end", "middle"],
                 "options": [
@@ -237,7 +169,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 8,
+                "id": 6,
                 "situation": "If life is pointless, then why do we pay for Netflix?",
                 "precondition": ["right", "begin", "end", "middle"],
                 "options": [
@@ -262,7 +194,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 9,
+                "id": 7,
                 "situation": "You went to IKEA and...",
                 "precondition": ["left", "begin", "end", "middle"],
                 "options": [
@@ -287,7 +219,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 10,
+                "id": 8,
                 "situation": "You feel guilty for the pain the social structure has caused.",
                 "precondition": ["left", "begin", "end", "middle"],
                 "options": [
@@ -313,7 +245,7 @@ class Dialogs {
                 ]
             },
             {
-                "id": 11,
+                "id": 9,
                 "situation": "The revolution will probably never come",
                 "precondition": ["left", "begin", "end", "middle"],
                 "options": [
