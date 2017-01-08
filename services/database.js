@@ -131,12 +131,22 @@ class Database {
             // Returning one pinko!
             for (var key in this.data) {
                 if (this.data.hasOwnProperty(key)) {
-                    if (this.data[key]["id"] === parseInt(id)) {
+                    if (parseInt(this.data[key].id) === parseInt(id)) {
                         return this.data[key];
                     }
                 }
             }
         }
+        var fetch_random = function fetch_random(obj) {
+    var temp_key, keys = [];
+    for(temp_key in obj) {
+       if(obj.hasOwnProperty(temp_key)) {
+           keys.push(temp_key);
+       }
+    }
+    return obj[keys[Math.floor(Math.random() * keys.length)]];
+}
+        return fetch_random(this.data);
     }
 
     getMaxID() {
@@ -174,11 +184,16 @@ class Database {
         id++;
         console.log("maxID: " + id);
 
+        if (parent2 === undefined) {
+          console.log("what the fuck");
+        }
         if (bias) {
-            name += parent2.name.split(" ")[1];
+            var newName = parent2.name.split(" ") || ["Marx"];
+            name += newName[newName.length - 1];
         }
         else {
-            name += parent1.name.split(" ")[1];
+          var newName = parent1.name.split(" ") || ["Marx"];
+          name += newName[newName.length - 1]
         }
 
         let pol = 0;
