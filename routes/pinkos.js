@@ -14,16 +14,16 @@ class Pinkos {
     router.get('/merge', function (req, res) {
       // NOW RANDOMLY KISS!
       app.services.Database.initialize();
-      
+
       var id1 = 0;
       var id2 = 0;
       var maxID = app.services.Database.getMaxID();
-      do {
-        id1 = Math.random() * (maxID - 0) + 0;
-        id2 = Math.random() * (maxID - 0) + 0;
-      }
       while (id1 === id2)
-
+      {
+        id1 = parseInt(Math.random() * (maxID - 0) + 0);
+        id2 = parseInt(Math.random() * (maxID - 0) + 0);
+      }
+      
       let parent1 = app.services.Database.getPinkos(id1);
       let parent2 = app.services.Database.getPinkos(id2);
       let freshPinko = app.services.Database.merge(id1, id2);
@@ -35,6 +35,23 @@ class Pinkos {
       };
 
       res.json(pinkoFamily);
+    });
+
+    router.get('/merge/:count', function (req, res) {
+      // NOW RANDOMLY KISS!
+      app.services.Database.initialize();
+      for(let i = 0; i < req.params.count; i++) {
+        var id1 = 0;
+        var id2 = 0;
+        var maxID = app.services.Database.getMaxID();
+        while (id1 === id2)
+        {
+          id1 = parseInt(Math.random() * (maxID - 0) + 0);
+          id2 = parseInt(Math.random() * (maxID - 0) + 0);
+        }
+        app.services.Database.merge(id1, id2);
+      }
+      res.json();
     });
 
     router.get('/:id(\\d+)', function (req, res) {

@@ -11,9 +11,9 @@ class Database {
     initialize() {
         if (!this.data) {
             this.data = {
-                "andri": app.services.Pinkos.getJSON(
+                "antonio gramsci": app.services.Pinkos.getJSON(
                     0,
-                    "andri",
+                    "antonio gramsci",
                     [
                         0, 0, 0, 1, 1, 0, 0, 0,
                         0, 1, 1, 1, 1, 1, 1, 0,
@@ -24,9 +24,9 @@ class Database {
                         0, 1, 1, 1, 1, 1, 1, 0,
                         0, 0, 0, 1, 1, 0, 0, 0]
                 ),
-                "lommi": app.services.Pinkos.getJSON(
+                "lommi lomm": app.services.Pinkos.getJSON(
                     1,
-                    "lommi",
+                    "lommi lomm",
                     [
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5,
@@ -37,9 +37,9 @@ class Database {
                         5, 5, 5, 5, 5, 5, 5, 5,
                         5, 5, 5, 5, 5, 5, 5, 5]
                 ),
-                "marx": app.services.Pinkos.getJSON(
+                "karl marx": app.services.Pinkos.getJSON(
                     2,
-                    "marx",
+                    "karl marx",
                     [
                         0, 0, 0, 0, 0, 0, 0, 0,
                         0, 0, 0, 2, 2, 0, 0, 0,
@@ -49,12 +49,68 @@ class Database {
                         0, 2, 2, 2, 2, 2, 2, 0,
                         0, 2, 2, 2, 2, 2, 2, 0,
                         2, 2, 2, 2, 2, 2, 2, 2]
+                ),
+                "andri rafn": app.services.Pinkos.getJSON(
+                    3,
+                    "andri rafn",
+                    [
+                        0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 4, 1, 0, 0, 0,
+                        0, 0, 0, 4, 1, 0, 0, 0,
+                        0, 0, 4, 4, 1, 1, 0, 0,
+                        0, 0, 4, 4, 1, 1, 0, 0,
+                        0, 4, 4, 4, 1, 1, 1, 0,
+                        0, 4, 4, 4, 1, 1, 1, 0,
+                        4, 4, 4, 4, 1, 1, 1, 1]
+                ),
+                "vladimir ulyanov": app.services.Pinkos.getJSON(
+                    4,
+                    "vladimir ulyanov",
+                    [
+                        1, 1, 1, 1, 1, 1, 1, 1,
+                        1, 1, 1, 3, 3, 1, 1, 1,
+                        1, 1, 3, 3, 3, 3, 1, 1,
+                        1, 1, 3, 1, 1, 3, 1, 1,
+                        1, 1, 3, 3, 3, 3, 1, 1,
+                        1, 3, 3, 1, 1, 3, 3, 1,
+                        1, 3, 1, 1, 1, 1, 3, 1,
+                        3, 3, 1, 1, 1, 1, 3, 3]
+                ),
+                "leon trotsky": app.services.Pinkos.getJSON(
+                    5,
+                    "leon trotsky",
+                    [
+                        5, 3, 3, 3, 3, 3, 3, 3,
+                        5, 5, 3, 3, 3, 3, 3, 3,
+                        5, 5, 5, 3, 3, 3, 3, 5,
+                        5, 5, 5, 3, 3, 3, 5, 5,
+                        5, 5, 5, 5, 5, 5, 5, 5,
+                        5, 5, 5, 5, 5, 5, 5, 3,
+                        5, 5, 5, 5, 5, 5, 3, 3,
+                        5, 5, 5, 5, 5, 3, 3, 3]
+                ),
+                "joseph stalin": app.services.Pinkos.getJSON(
+                    6,
+                    "joseph stalin",
+                    [
+                        0, 0, 0, 0, 0, 0, 0, 4,
+                        0, 0, 0, 0, 0, 4, 4, 4,
+                        0, 0, 0, 0, 0, 4, 0, 0,
+                        0, 0, 0, 4, 4, 4, 0, 0,
+                        0, 0, 0, 4, 0, 0, 0, 0,
+                        0, 4, 4, 4, 0, 0, 0, 0,
+                        0, 4, 0, 0, 0, 0, 0, 0,
+                        4, 4, 0, 0, 0, 0, 0, 0]
                 )
             };
 
             this.getImage(0);
             this.getImage(1);
             this.getImage(2);
+            this.getImage(3);
+            this.getImage(4);
+            this.getImage(5);
+            this.getImage(6);
         }
     }
     getPinkos(id) {
@@ -99,13 +155,20 @@ class Database {
             name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         }
 
-        name += " ";
-
-        for (let i = 0; i < 8; i++) {
-            name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        let bias = true;
+        if (Math.random() > 0.5) {
+            bias = false;
         }
 
-        let id = this.getMaxID();        
+        name += " ";
+        if (bias) {
+            name += parent2.name.split(" ")[1];
+        }
+        else {
+            name += parent1.name.split(" ")[1];
+        }
+
+        let id = this.getMaxID();
         id++;
 
         this.data[name] = app.services.Pinkos.getJSON(
@@ -118,17 +181,13 @@ class Database {
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0]
         )
 
-        let horizontalFlip = true;
-        if (Math.random() > 0.5) {
-            horizontalFlip = false;
-        }
-
         let size = 0;
         for (let i = 0; i < 32; i++) {
-            if (horizontalFlip) {
+            if (bias) {
                 this.data[name].form[i] = parent2.form[i];
             }
             else {
@@ -137,7 +196,7 @@ class Database {
         }
 
         for (let i = 32; i < 64; i++) {
-            if (horizontalFlip) {
+            if (bias) {
                 this.data[name].form[i] = parent1.form[i];
             }
             else {
