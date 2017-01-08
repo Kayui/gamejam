@@ -11,6 +11,8 @@ var pickOption = function() {
   initSplash(function() {});
 }
 
+
+
 var optionscreen = function(id, text, options) {
    id = id || 1;
    text = text || "This happend my dear friend you really should do something about it";
