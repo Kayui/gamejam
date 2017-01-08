@@ -7,8 +7,6 @@ let keyhandler = function(keycode) {
 
 let quit = function() {
   console.log("quitting");
-  mainWindow = null;
-  app.exit();
 }
 
 var gameintro = function() {

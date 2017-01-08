@@ -1,5 +1,9 @@
 "use strict";
 
+if (typeof process === undefined || typeof process.versions === undefined || typeof process.versions.electron === undefined) {
+  // This is done to make the game fail in a normal browser HAHAHHAAH!
+}
+else {
 var app =  {};
 app.render = null;
 
@@ -23,3 +27,4 @@ $( document ).ready(function() {
     // introconductor.player.play();
 	});
 });
+}

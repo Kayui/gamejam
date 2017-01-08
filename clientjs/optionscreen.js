@@ -1,5 +1,6 @@
 var getnewoption = function() {
   // http://localhost:8080/pinkos/1/dialog
+  console.log("the url is "+"/pinkos/"+pinkosData.id+"/dialog");
   $.ajax({
   url: "/pinkos/"+pinkosData.id+"/dialog",
   success: function(data) {
@@ -17,6 +18,8 @@ var sendOption = function(id, optionID) {
    keyhandler = function(key) {
    };
   // http://localhost:8080/pinkos/1/dialog/2
+  console.log("The id of the character is "+pinkosData.id);
+  console.log("The url is "+"/pinkos/"+pinkosData.id+"/dialog/"+id+"/"+optionID);
   $.ajax({
   url: "/pinkos/"+pinkosData.id+"/dialog/"+id+"/"+optionID,
   success: function(data) {
