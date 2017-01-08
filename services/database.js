@@ -262,6 +262,32 @@ class Database {
 
         png.pack().pipe(fs.createWriteStream('public/assets/characters/' + this.data[name].id + '.png'));
     }
+
+    updatePinko(id, lifeSwing, politicalSwing) {
+        console.log(lifeSwing);
+        for (var key in this.data) {
+            if (this.data.hasOwnProperty(key)) {
+                if (parseInt(this.data[key]["id"]) === parseInt(id)) {
+                    this.data[key].lifepoints -= parseInt(lifeSwing);
+                    if(this.data[key].lifepoints > 6) {
+                        this.data[key].lifepoints = 6;
+                    }
+                    else if(this.data[key].lifepoints < 0) {
+                        this.data[key].lifepoints = 0;
+                    }
+
+                    this.data[key].political += parseInt(politicalSwing);
+                    if(this.data[key].political > 10) {
+                        this.data[key].political = 10;
+                    }
+                    else if(this.data[key].political < 0) {
+                        this.data[key].political = 0;
+                    }
+                    return this.data[key];
+                }
+            }
+        }
+    }
 }
 
 module.exports = function () { return new Database() };

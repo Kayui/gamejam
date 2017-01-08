@@ -36,6 +36,15 @@ class Pinkos {
       res.json(app.services.Dialogs.getDialog(req.params.id));
     });
 
+    router.get('/:id/dialog/:dialogID/:dialogOptionID', function (req, res) {
+      app.services.Database.initialize();
+      res.json(app.services.Dialogs.processDialogOption(
+        req.params.dialogID,
+        req.params.dialogOptionID,
+        req.params.id
+      ));
+    });
+
     router.get('/merge', function (req, res) {
       // NOW RANDOMLY KISS!
       app.services.Database.initialize();

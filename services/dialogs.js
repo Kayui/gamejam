@@ -73,6 +73,29 @@ class Dialogs {
         ]
     }
 
+    processDialogOption(dialogID, optionID, pinkoID) {
+        let option = "";
+        let found = false;
+        for (let key in this.dialogs) {
+            if (parseInt(this.dialogs[key].id) === parseInt(dialogID)) {
+                for (let optionKey in this.dialogs[key].options) {
+                    if (parseInt(this.dialogs[key].options[optionKey].optionID) === parseInt(optionID)) {
+                        option = this.dialogs[key].options[optionKey];
+                        found = true;
+                        break;
+                    }
+                }
+                if(found){
+                    console.log(option);
+                    return app.services.Database.updatePinko(pinkoID, option.lifedrain, option.politicalSwing);
+                }
+            }
+        }
+
+        // failsafe, no change
+        return {"hey": "go away"};//app.services.Database.getPinkos(pinkoID);
+    }
+
     getDialog(pinkoID) {
 
         let game = "middle";
@@ -94,10 +117,10 @@ class Dialogs {
         }
 
         var match = [];
-        for(let key in this.dialogs) {
-            if(this.dialogs[key].precondition.indexOf(game) > -1) {
-                if(this.dialogs[key].precondition.indexOf(political) > -1) {
-                    match.push(this.dialogs[key]);                    
+        for (let key in this.dialogs) {
+            if (this.dialogs[key].precondition.indexOf(game) > -1) {
+                if (this.dialogs[key].precondition.indexOf(political) > -1) {
+                    match.push(this.dialogs[key]);
                 }
             }
         }
