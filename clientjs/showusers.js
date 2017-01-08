@@ -25,7 +25,8 @@ var showUsersHelper = function(users) {
 	 app.extrarender.element.style.top ="0";
 	 app.extrarender.element.style.left ="0";
 
-	 var text = new DrawText("Society: anarchist", {size: 0, center: true, color: 5});
+	 var socialText = "Society is "+users[Object.keys(users)[0]].averageName;
+	 var text = new DrawText(socialText, {size: 0, center: true, color: 5});
 
 	 app.extrarender.draw(text);
 
@@ -55,6 +56,7 @@ var showUsersHelper = function(users) {
 	 }
 	 grid.style.overflowY = "scroll";
 	 grid.style.height=height-20+"px";
+
 	 for (let key in users) {
 		 let y = document.createElement('div');
 		 y.style.maxWidth = "64px";
