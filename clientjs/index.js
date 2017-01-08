@@ -1,11 +1,12 @@
 "use strict";
+var app =  {};
+app.render = null;
+
 
 if (typeof process === undefined || typeof process.versions === undefined || typeof process.versions.electron === undefined) {
   // This is done to make the game fail in a normal browser HAHAHHAAH!
 }
 else {
-var app =  {};
-app.render = null;
 
 var resetApp = function() {
   app.render = new Render(document.body, true);
