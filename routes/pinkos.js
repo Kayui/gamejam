@@ -24,6 +24,7 @@ class Pinkos {
       for (var key in pinkos) {
         if (pinkos.hasOwnProperty(key)) {
           pinkos[key].average = average;
+          pinkos[key].averageName = app.services.Politics.getPolitics(average);
         }
       }
       
