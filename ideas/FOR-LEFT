@@ -1,159 +1,85 @@
 ,
 {
     "id": ,
-    "situation": "",
+    "situation": "You went to IKEA and...",
     "precondition": ["left", "begin", "end", "middle"],
     "options": [
         {
             "optionID": 0,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "Ate cheap Vegetarian food.",
+            "lifedrain": 1,
+            "politicalSwing": 1,
             "postText": ""
         },
         {
             "optionID": 1,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "Lit the christmas goat on fire.",
+            "lifedrain": 2,
+            "politicalSwing": 3,
             "postText": ""
         },
         {
             "optionID": 2,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
-            "postText": ""
-        },
-        {
-            "optionID": 3,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "I am going to sell better and cheaper furniture than they do.",
+            "lifedrain": 3,
+            "politicalSwing": -4,
             "postText": ""
         }
     ]
 },
 {
     "id": ,
-    "situation": "",
+    "situation": "You feel guilty for the pain the social structure has caused.",
     "precondition": ["left", "begin", "end", "middle"],
     "options": [
         {
             "optionID": 0,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "You buy ice cream.",
+            "lifedrain": 1,
+            "politicalSwing": -1 ,
             "postText": ""
         },
         {
             "optionID": 1,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "You write an angry poem and read aloud from your soapbox.",
+            "lifedrain": 2,
+            "politicalSwing": 1,
             "postText": ""
         },
         {
             "optionID": 2,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
-            "postText": ""
-        },
-        {
-            "optionID": 3,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
-            "postText": ""
+            "text": "Go binge drinking in an art gallery.",
+            "lifedrain": 2,
+            "politicalSwing": -4,
+            "postText": "You meet a friend who convince you to form a startup-company."
         }
     ]
 },
 {
     "id": ,
-    "situation": "",
+    "situation": "The revolution will probably never come",
     "precondition": ["left", "begin", "end", "middle"],
     "options": [
         {
             "optionID": 0,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "So what? I live for the moment.",
+            "lifedrain": 1,
+            "politicalSwing": 1,
             "postText": ""
         },
         {
             "optionID": 1,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
-            "postText": ""
+            "text": "Yeah, it will. Just watch.",
+            "lifedrain": 4,
+            "politicalSwing": 4,
+            "postText": "You started the revolution and no one joined."
         },
         {
             "optionID": 2,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
-            "postText": ""
-        },
-        {
-            "optionID": 3,
-            "text": "",
-            "lifedrain": ,
-            "politicalSwing": ,
+            "text": "Thank god!",
+            "lifedrain": 1,
+            "politicalSwing": -3,
             "postText": ""
         }
     ]
 }
-
-
-
-You went to IKEA and
-
-Ate cheap Vegetarian food.
--1
-1
-
-Lit the christmas goat on fire.
--2
-3
-
-I am going to sell better and cheaper furniture than they do.
--3
--4
-
-______
-
-You feel guilty for the pain the social structure has caused.
-
-You buy ice cream.
--1 
--1
-
-You write an angry poem and read aloud from your soapbox.
--2
-1
-
-Go binge drinking in an art gallery.
-"You meet a friend who convince you to form a startup-company."
--2
--4
-
-_______
-
-The revolution will probably never come
-
-So what? I live for the moment.
--1
-1
-
-Yeah, it will. Just watch.
--4
-4
-
-Thank god!
--1
--3
-
-
-
-
