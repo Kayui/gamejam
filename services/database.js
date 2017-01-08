@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 const PNG = require('pngjs').PNG,
     fs = require('fs');

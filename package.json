@@ -1,6 +1,7 @@
 {
-  "name": "gamejam",
+  "name": "SYNTHESIS",
   "version": "0.0.0",
+  "main"    : "main.js",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -9,10 +10,13 @@
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
+    "ejs": "^2.5.5",
     "express": "~4.14.0",
     "jquery": "^3.1.1",
     "morgan": "~1.7.0",
+    "nw": "^0.19.4",
+    "pngjs": "^3.0.0",
     "serve-favicon": "~2.3.0"
-  },
-  "devDependencies": {}
+  }
+
 }
