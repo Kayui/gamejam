@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use strict";
 const PNG = require('pngjs').PNG,
     fs = require('fs');
@@ -89,7 +88,7 @@ class Database {
         }
 
         name += " ";
-        
+
         for (let i = 0; i < 8; i++) {
             name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         }
