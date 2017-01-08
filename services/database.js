@@ -76,6 +76,18 @@ class Database {
         }
     }
 
+    getMaxID() {
+        let id = 0;
+        for (var key in this.data) {
+            if (this.data.hasOwnProperty(key)) {
+                if (this.data[key]["id"] > id) {
+                    id = this.data[key]["id"];
+                }
+            }
+        }
+        return id;
+    }
+
     merge(id1, id2) {
         let parent1 = this.getPinkos(id1);
         let parent2 = this.getPinkos(id2);
@@ -93,14 +105,7 @@ class Database {
             name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         }
 
-        let id = 0;
-        for (var key in this.data) {
-            if (this.data.hasOwnProperty(key)) {
-                if (this.data[key]["id"] > id) {
-                    id = this.data[key]["id"];
-                }
-            }
-        }
+        let id = this.getMaxID();        
         id++;
 
         this.data[name] = app.services.Pinkos.getJSON(
