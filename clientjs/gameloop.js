@@ -19,6 +19,7 @@ var gameintro = function() {
     }
     introconductor.player.stop();
     window.setTimeout(initSplash, 500);
+    window.setTimeout(getnewoption, 1000);
   }
 
 }

@@ -37,6 +37,28 @@ html, body {
 
 }
 
+.optionpick {
+  width: 100%;
+  text-align: center;
+  min-height: 40px;
+  max-height: 80px;
+  height: 20%;
+  border-style: solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid #FFF;
+  margin-bottom: 30px;
+}
+
+.optionpick.selected {
+  border-color: rgb(255, 0, 94);
+  color: rgb(255, 0, 94);
+}
+
+.optionid0 {
+  margin-top: 40px;
+}
+
 
 @font-face {
     font-family: 'VT323';

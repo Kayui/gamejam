@@ -7,9 +7,7 @@ const app = electron.app;
 var mainWindow = null;
 
 app.on('window-all-closed', function () {
-  if (process.platform != 'darwin') {
-    app.quit();
-  }
+    app.quit();  
 });
 app.on('ready', function () {
   console.log(__dirname + '\favicon.ico');
