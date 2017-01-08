@@ -2,12 +2,12 @@
 class Dialogs {
     constructor() {
         this.dialogs = [
-            {   
+            {
                 "id": 0,
                 "situation": "this is a sticky situation",
                 "precondition": ["left", "right", "center", "begin", "end", "middle"],
                 "options": [
-                    {   
+                    {
                         "optionID": 0,
                         "text": "unstick",
                         "lifedrain": 2,
@@ -34,14 +34,75 @@ class Dialogs {
                         "lifedrain": 2,
                         "politicalSwing": 1
                     }
-                    
+                ]
+            },
+            {
+                "id": 1,
+                "situation": "this is another not as sticky of a situation",
+                "precondition": ["left", "right", "center", "begin", "end", "middle"],
+                "options": [
+                    {
+                        "optionID": 0,
+                        "text": "not this again...",
+                        "lifedrain": 2,
+                        "politicalSwing": -1,
+                        "postText": "you unstick and falter away with a grin"
+                    },
+                    {
+                        "optionID": 1,
+                        "text": "gtfo",
+                        "lifedrain": 1,
+                        "politicalSwing": 0,
+                        "postText": "nice man, real nice..."
+                    },
+                    {
+                        "optionID": 2,
+                        "text": "kill self",
+                        "lifedrain": 6,
+                        "politicalSwing": 0,
+                        "postText": "you fail to kill yourself but die of exposure"
+                    },
+                    {
+                        "optionID": 3,
+                        "text": "does not matter",
+                        "lifedrain": 2,
+                        "politicalSwing": 1
+                    }
                 ]
             }
         ]
     }
 
     getDialog(pinkoID) {
-        return this.dialogs[0];
+
+        let game = "middle";
+        let political = "center";
+        let pinko = app.services.Database.getPinkos(pinkoID);
+
+        if (pinko.lifepoints === 1) {
+            game = "end";
+        }
+        else if (pinko.lifepoints === 6) {
+            game = "begin";
+        }
+
+        if (pinko.political === 0) {
+            political = "right";
+        }
+        else if (pinko.political === 9) {
+            political = "left";
+        }
+
+        var match = [];
+        for(let key in this.dialogs) {
+            if(this.dialogs[key].precondition.indexOf(game) > -1) {
+                if(this.dialogs[key].precondition.indexOf(political) > -1) {
+                    match.push(this.dialogs[key]);                    
+                }
+            }
+        }
+
+        return this.dialogs[Math.floor(Math.random() * (match.length - 0) + 0)];
     }
 }
 
