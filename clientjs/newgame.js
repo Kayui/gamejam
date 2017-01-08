@@ -1,4 +1,22 @@
 var newGame = function() {
+  $.ajax({
+  url: "/pinkos/merge",
+  success: function() {
+    console.log("hohho");
+  }
+  });
+}
+var newGameHelper = function() {
+  keyhandler = function() {
+    console.log("start game");
+    keyhandler = function() {
+
+    }
+    introconductor.player.stop();
+    window.setTimeout(initSplash, 500);
+    window.setTimeout(getnewoption, 1000);
+  }
+
   app.mainholder = new Render(app.render.element);
   app.holder = new Render(app.mainholder.element);
 

@@ -34,7 +34,6 @@ var initSplash = function(endfunction) {
 }
 
 var pilotSignalTimer = function() {
-    console.log("rass");
     ctx.fillStyle = pilotColors[pilotColorsIndex];
     pilotColorsIndex++;
     if (pilotColors > pilotColors.length) {
@@ -45,7 +44,6 @@ var pilotSignalTimer = function() {
 
 };
 var ShowDataSignal = function() {
-console.log("falleg augu");
  ctx.fillStyle = pilotColors[0];
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = pilotColors[1];
