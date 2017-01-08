@@ -38,7 +38,7 @@ class Pinkos {
     });
 
     router.get('/merge/:count', function (req, res) {
-      // NOW RANDOMLY KISS!
+      // NOW RANDOMLY KISS ALOT!
       app.services.Database.initialize();
       for(let i = 0; i < req.params.count; i++) {
         var id1 = 0;

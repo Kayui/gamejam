@@ -148,12 +148,7 @@ class Database {
         let parent1 = this.getPinkos(id1);
         let parent2 = this.getPinkos(id2);
 
-        let name = "";
-        let alphabet = "aaaaaaabcdeeeeeeeefghiiiiiiijklmnoooooooopqrstuuuuuuuvwxyz";
-
-        for (let i = 0; i < 6; i++) {
-            name += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        }
+        let name = app.services.Names.getName();
 
         let bias = true;
         if (Math.random() > 0.5) {
