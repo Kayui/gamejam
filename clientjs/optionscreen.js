@@ -20,7 +20,11 @@ var sendOption = function(id, optionID) {
   $.ajax({
   url: "/pinkos/"+pinkosData.id+"/dialog/"+id+"/"+optionID,
   success: function(data) {
-    initSplash(resetApp);
+    // initSplash(resetApp);
+    document.body.innerHTML = '';
+    console.log(data);
+    pinkosData = data;
+    getnewoption();
   }
   });
 }
