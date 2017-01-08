@@ -12,7 +12,6 @@ var pickOption = function() {
 }
 
 var optionscreen = function(id, text, options) {
-  console.log("hello");
    id = id || 1;
    text = text || "This happend my dear friend you really should do something about it";
    options = options || [{id: 1, text: "hehehe"}, {id: 2, text: "hehehe"}, {id: 3, text: "hehehe"}, {id: 4, text: "hehehe"}]
@@ -41,7 +40,7 @@ var optionscreen = function(id, text, options) {
    holder.style.display = "flex";
    app.holder.element.appendChild(holder);
 
-   var character = new DrawCharacterBox(undefined, "", holder);
+   var character = new DrawCharacterBox(pinkosData, "", holder);
 
    app.titleHolder = document.createElement('div');
    app.titleHolder.style.width = "100%";
